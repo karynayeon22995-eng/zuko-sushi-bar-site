@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Zuko Sushi Bar — Sushi · Sashimi · Sake | San Jose, CA</title>
+  <meta name="description" content="Authentic Japanese sushi, sashimi & sake in San Jose. Fresh chef specials and signature rolls like the Heart Breaker & Lion King. Order online for pickup.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zuko Sushi Bar — Sushi · Sashimi · Sake">
+  <meta property="og:description" content="Authentic Japanese dining in San Jose, CA. Fresh sushi, sashimi & sake. Order online.">
+  <meta property="og:image" content="assets/nigiri-closeup.png">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- SEO: Restaurant + OrderAction (đổi target khi có link order) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Zuko Sushi Bar",
+    "servesCuisine": ["Japanese", "Sushi"],
+    "image": "assets/nigiri-closeup.png",
+    "telephone": "+1-408-123-4567",
+    "address": { "@type": "PostalAddress", "streetAddress": "3255 S White Road", "addressLocality": "San Jose", "addressRegion": "CA", "postalCode": "95148", "addressCountry": "US" },
+    "geo": { "@type": "GeoCoordinates", "latitude": 37.3145, "longitude": -121.7937 },
+    "hasMenu": "menu.html",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "11:30", "closes": "21:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:30", "closes": "22:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "21:00" }
+    ],
+    "potentialAction": { "@type": "OrderAction", "target": "https://REPLACE-WITH-ORDER-URL" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="Zuko Sushi Bar — home">
+        <img src="assets/logo.png" alt="Zuko Sushi Bar">
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-controls="nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html" aria-current="page">HOME</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="menu.html">MENU</a>
+        <a href="contact.html">CONTACT US</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <img class="hero__logo" src="assets/logo.png" alt="Zuko Sushi Bar">
+      <p class="hero__tagline">SUSHI · SASHIMI · SAKE</p>
+      <p class="hero__welcome">Welcome! Come, taste, and enjoy!</p>
+      <a href="menu.html" class="btn btn--primary" data-order="hero">ORDER ONLINE</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="wrap about__grid">
+      <div>
+        <p class="eyebrow">ABOUT US</p>
+        <h2 class="about__title">A Passion for Authentic Japanese Cuisine</h2>
+        <div class="divider" style="width:50px;margin-bottom:24px"></div>
+        <p class="about__text">Welcome to Zuko Sushi Bar! Located at 3255 S White Road, San Jose, CA 95148, we are dedicated to crafting an authentic and premium Japanese dining experience using the freshest, highest-quality ingredients.</p>
+        <p class="about__text">Our signature offerings include fresh Sashimi Chef Specials, creative rolls like the Heart Breaker and Lion King Roll, and traditional favorites such as Hamachi Kama and Chicken Karaage — all showcasing the best of Japanese culinary artistry.</p>
+        <a href="menu.html" class="btn btn--primary btn--sm" style="margin-top:8px">VIEW MENU</a>
+      </div>
+      <div class="about__media">
+        <img src="assets/sashimi-platter.png" alt="Fresh Sashimi Platter" loading="lazy" decoding="async">
+        <span class="about__media-frame" aria-hidden="true"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER ONLINE BANNER -->
+  <section id="menu-cta" class="banner">
+    <div class="banner__bg"></div>
+    <div class="banner__overlay"></div>
+    <div class="banner__content">
+      <h2 class="banner__title">Order Online!</h2>
+      <p class="banner__text">Wait, what?! You can order your favorite sushi and Japanese dishes online! What are you waiting for?</p>
+      <a href="menu.html" class="btn btn--invert" data-order="banner">ORDER NOW</a>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="section reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">TESTIMONIALS</p>
+        <h2 class="h-section">Our Reviews</h2>
+        <div class="divider divider--center" style="margin-top:20px"></div>
+      </div>
+      <div class="reviews__grid">
+        <article class="review">
+          <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review__text">"Went here with some friends after work and really enjoyed it. The atmosphere is great and the food was delicious across the board. The Heart Breaker Roll was definitely a highlight. Highly recommend this spot!"</p>
+          <div class="divider divider--center" style="width:40px;height:1px;margin-bottom:16px"></div>
+          <p class="review__name">— Michelle T.</p>
+        </article>
+        <article class="review">
+          <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review__text">"Love this place! Excellent food and service! The sashimi is fresh and sweet. We also had the Sushi Deluxe and all the pieces were made with fresh ingredients and taste amazing! Will definitely return and 100% recommend!"</p>
+          <div class="divider divider--center" style="width:40px;height:1px;margin-bottom:16px"></div>
+          <p class="review__name">— David K.</p>
+        </article>
+        <article class="review">
+          <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review__text">"Absolutely loved this place. The sushi was incredibly fresh, the presentation was beautiful, and the quality of ingredients really stood out. The service was attentive and the atmosphere felt calm and authentic."</p>
+          <div class="divider divider--center" style="width:40px;height:1px;margin-bottom:16px"></div>
+          <p class="review__name">— Sarah L.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <img class="footer__logo" src="assets/logo.png" alt="Zuko Sushi Bar">
+      <p class="footer__copy">© 2026 Zuko Sushi Bar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-order"><a href="menu.html" data-order="sticky">ORDER ONLINE</a></div>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
