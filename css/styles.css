@@ -15,9 +15,9 @@
   --text-muted: #555;
   --fh: 'Bebas Neue', sans-serif;   /* headings / nav */
   --fb: 'Open Sans', sans-serif;    /* body */
-  --header-h: 78px;
+  --header-h: 88px;
 }
-@media (min-width: 1024px) { :root { --header-h: 100px; } }
+@media (min-width: 1024px) { :root { --header-h: 120px; } }
 
 /* ---- reset ---- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -71,8 +71,8 @@ a { color: inherit; }
 }
 @media (min-width: 1024px) { .header__inner { padding: 0 32px; } }
 .header__logo { display: flex; align-items: center; min-width: 0; }
-.header__logo img { height: 54px; max-width: 70vw; object-fit: contain; }
-@media (min-width: 1024px) { .header__logo img { height: 76px; max-width: none; } }
+.header__logo img { height: 64px; max-width: 74vw; object-fit: contain; }
+@media (min-width: 1024px) { .header__logo img { height: 96px; max-width: none; } }
 
 /* hamburger (mobile-first: shown by default) */
 .nav-toggle {
