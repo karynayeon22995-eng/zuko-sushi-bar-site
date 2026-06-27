@@ -16,8 +16,6 @@
   --fh: 'Bebas Neue', sans-serif;   /* headings / nav */
   --fb: 'Open Sans', sans-serif;    /* body */
   --header-h: 88px;
-  /* white outline around the (transparent) logo so it reads on dark backgrounds */
-  --logo-outline: drop-shadow(1.5px 0 0 #fff) drop-shadow(-1.5px 0 0 #fff) drop-shadow(0 1.5px 0 #fff) drop-shadow(0 -1.5px 0 #fff) drop-shadow(1px 1px 0 #fff) drop-shadow(-1px -1px 0 #fff) drop-shadow(1px -1px 0 #fff) drop-shadow(-1px 1px 0 #fff);
 }
 @media (min-width: 1024px) { :root { --header-h: 120px; } }
 
@@ -73,7 +71,7 @@ a { color: inherit; }
 }
 @media (min-width: 1024px) { .header__inner { padding: 0 32px; } }
 .header__logo { display: flex; align-items: center; min-width: 0; }
-.header__logo img { height: 64px; max-width: 74vw; object-fit: contain; filter: var(--logo-outline); }
+.header__logo img { height: 64px; max-width: 74vw; object-fit: contain; }
 @media (min-width: 1024px) { .header__logo img { height: 96px; max-width: none; } }
 
 /* hamburger (mobile-first: shown by default) */
@@ -124,7 +122,7 @@ a { color: inherit; }
 .hero__logo {
   width: clamp(240px, 62vw, 440px);
   margin: 0 auto 28px;
-  filter: var(--logo-outline) drop-shadow(0 6px 18px rgba(0,0,0,.4));
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.4));
 }
 .hero__tagline { font-family: var(--fh); font-size: clamp(20px, 5vw, 28px); letter-spacing: clamp(3px, 1.2vw, 6px); color: rgba(255,255,255,.85); margin-bottom: 12px; }
 .hero__welcome { font-size: clamp(15px, 3.6vw, 18px); color: rgba(255,255,255,.7); font-style: italic; margin-bottom: 40px; }
@@ -192,7 +190,7 @@ a { color: inherit; }
 
 /* ===================== FOOTER ===================== */
 .footer { background: var(--black); padding: 40px 20px; text-align: center; }
-.footer__logo { height: 46px; margin: 0 auto 16px; filter: var(--logo-outline); }
+.footer__logo { height: 46px; margin: 0 auto 16px; }
 .footer__copy { font-size: 13px; color: rgba(255,255,255,.35); letter-spacing: 1px; }
 
 /* ===================== STICKY MOBILE ORDER ===================== */
