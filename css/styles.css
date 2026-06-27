@@ -16,6 +16,8 @@
   --fh: 'Bebas Neue', sans-serif;   /* headings / nav */
   --fb: 'Open Sans', sans-serif;    /* body */
   --header-h: 88px;
+  /* white outline around the (transparent) logo so it reads on dark backgrounds */
+  --logo-outline: drop-shadow(1.5px 0 0 #fff) drop-shadow(-1.5px 0 0 #fff) drop-shadow(0 1.5px 0 #fff) drop-shadow(0 -1.5px 0 #fff) drop-shadow(1px 1px 0 #fff) drop-shadow(-1px -1px 0 #fff) drop-shadow(1px -1px 0 #fff) drop-shadow(-1px 1px 0 #fff);
 }
 @media (min-width: 1024px) { :root { --header-h: 120px; } }
 
@@ -62,8 +64,8 @@ a { color: inherit; }
 /* ===================== HEADER / NAV ===================== */
 .header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  background: rgba(255,255,255,.97); backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(0,0,0,.08); box-shadow: 0 2px 14px rgba(0,0,0,.06);
+  background: rgba(15,15,15,.95); backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .header__inner {
   max-width: 1200px; margin: 0 auto; padding: 0 20px;
@@ -71,7 +73,7 @@ a { color: inherit; }
 }
 @media (min-width: 1024px) { .header__inner { padding: 0 32px; } }
 .header__logo { display: flex; align-items: center; min-width: 0; }
-.header__logo img { height: 64px; max-width: 74vw; object-fit: contain; }
+.header__logo img { height: 64px; max-width: 74vw; object-fit: contain; filter: var(--logo-outline); }
 @media (min-width: 1024px) { .header__logo img { height: 96px; max-width: none; } }
 
 /* hamburger (mobile-first: shown by default) */
@@ -79,22 +81,22 @@ a { color: inherit; }
   display: inline-flex; flex-direction: column; gap: 5px;
   background: none; border: 0; padding: 8px; cursor: pointer;
 }
-.nav-toggle span { width: 26px; height: 2px; background: var(--ink); transition: transform .3s, opacity .3s; }
+.nav-toggle span { width: 26px; height: 2px; background: #fff; transition: transform .3s, opacity .3s; }
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .nav {
   position: absolute; top: 100%; left: 0; right: 0;
-  background: rgba(255,255,255,.98); display: flex; flex-direction: column;
+  background: rgba(15,15,15,.98); display: flex; flex-direction: column;
   max-height: 0; overflow: hidden; transition: max-height .35s ease;
-  border-bottom: 1px solid rgba(0,0,0,.08); box-shadow: 0 10px 22px rgba(0,0,0,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .nav.is-open { max-height: 360px; }
 .nav a {
-  font-family: var(--fh); font-size: 22px; letter-spacing: 2px; color: var(--ink);
+  font-family: var(--fh); font-size: 22px; letter-spacing: 2px; color: #fff;
   text-decoration: none; padding: 16px 20px; text-align: center;
-  border-top: 1px solid rgba(0,0,0,.06); transition: color .3s;
+  border-top: 1px solid rgba(255,255,255,.06); transition: color .3s;
 }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--red); }
 
@@ -122,7 +124,7 @@ a { color: inherit; }
 .hero__logo {
   width: clamp(240px, 62vw, 440px);
   margin: 0 auto 28px;
-  filter: brightness(0) invert(1) drop-shadow(0 4px 18px rgba(0,0,0,.45));
+  filter: var(--logo-outline) drop-shadow(0 6px 18px rgba(0,0,0,.4));
 }
 .hero__tagline { font-family: var(--fh); font-size: clamp(20px, 5vw, 28px); letter-spacing: clamp(3px, 1.2vw, 6px); color: rgba(255,255,255,.85); margin-bottom: 12px; }
 .hero__welcome { font-size: clamp(15px, 3.6vw, 18px); color: rgba(255,255,255,.7); font-style: italic; margin-bottom: 40px; }
@@ -190,7 +192,7 @@ a { color: inherit; }
 
 /* ===================== FOOTER ===================== */
 .footer { background: var(--black); padding: 40px 20px; text-align: center; }
-.footer__logo { height: 46px; margin: 0 auto 16px; filter: brightness(0) invert(1); opacity: .85; }
+.footer__logo { height: 46px; margin: 0 auto 16px; filter: var(--logo-outline); }
 .footer__copy { font-size: 13px; color: rgba(255,255,255,.35); letter-spacing: 1px; }
 
 /* ===================== STICKY MOBILE ORDER ===================== */
